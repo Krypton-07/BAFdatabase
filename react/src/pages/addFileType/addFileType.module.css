@@ -1,0 +1,77 @@
+:root {
+    --primary-bg: #1e293b;
+    --card-bg: #334155;
+    --accent: #38bdf8;
+    --input-bg: #475569;
+    --text-color: #f1f5f9;
+    --placeholder-color: #94a3b8;
+    --button-bg: #38bdf8;
+    --button-hover: #0ea5e9;
+    --focus-ring: #7dd3fc;
+    --shadow: rgba(0, 0, 0, 0.4);
+}
+
+.card {
+    background-color: #334155;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.title {
+    color: var(--accent);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+}
+
+.name {
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.name::placeholder {
+    color: var(--placeholder-color);
+    opacity: 0.7;
+}
+
+.button {
+    background-color: var(--button-bg);
+    color: var(--primary-bg);
+    font-weight: bold;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.button:hover {
+    background-color: var(--button-hover);
+}

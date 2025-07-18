@@ -1,0 +1,191 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section1 {
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f1f5f9;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: clamp(40px, 10vw, 80px);
+    height: auto;
+    margin-left: .5rem;
+}
+
+.logo2 {
+    transform: rotateY(180deg);
+    width: clamp(40px, 10vw, 80px);
+    height: auto;
+    margin-right: .5rem;
+}
+
+.title {
+    font-weight: 700;
+    font-size: clamp(1.3rem, 4vw, 2.5rem);
+    letter-spacing: 1px;
+    text-align: center;
+    flex: 1 1 100%;
+}
+
+.section2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 2rem .5rem 0 .5rem;
+}
+
+.subSection {
+    width: 90%;
+    max-width: 1500px;
+    min-height: 0;
+    height: 70%;
+    max-height: 575px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    padding: 2rem 3rem;
+    overflow-y: auto;
+    z-index: 2;
+    grid-gap: 5rem;
+    scrollbar-width: thin;
+    scrollbar-color: #475569 #1E2A38;
+    scroll-behavior: smooth;
+    box-shadow:
+        inset 6px 6px 40px 1px rgba(0, 0, 0, 0.6),
+        inset -3px -6px 40px 1px rgba(0, 0, 0, 0.6)
+}
+
+.subSection::-webkit-scrollbar {
+    width: 5px
+}
+
+.subSection::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.subSection::-webkit-scrollbar-thumb {
+    background: #475569 !important;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.subSection::-webkit-scrollbar-button {
+    display: none;
+}
+
+.subSection::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+.officeNameCard {
+    width: 90%;
+    max-width: 1000px;
+    padding: 2rem 0;
+    border-radius: 16px;
+    background: linear-gradient(145deg, #3b4f63, #263746);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.officeNameCard:hover {
+    transform: translateY(-5px) scale(0.97);
+    background: linear-gradient(145deg, #2a3b4d, #1f2e3c);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    color: #f1f5f9;
+    border: 2px solid rgba(255, 255, 255, 0.26);
+}
+
+.noOffices {
+    width: 90%;
+    max-width: 1000px;
+    padding: 2rem 0;
+    border-radius: 16px;
+    background: linear-gradient(145deg, #3b4f63, #263746);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.noOfficesButton {
+    background-color: #38BDF8;
+    color: #1E293B;
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    font-size: 0.95rem;
+}
+
+.noOfficesButton:hover {
+    background: #506990;
+    color: #a9b7c6;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .officeNameCard,
+    .noOffices {
+        padding: 1.25rem;
+        font-size: 1rem;
+    }
+
+    .area {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-height: 660px) {
+    .section2 {
+        gap: 0;
+    }
+}

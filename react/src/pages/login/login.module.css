@@ -1,0 +1,176 @@
+.card {
+    background-color: #3a6d8c;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.title {
+    color: #B0EAD8;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input {
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+    background-color: #6a9ab0;
+    color: #001f3f;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input::placeholder {
+    color: #001f3f;
+    opacity: 0.6;
+}
+
+.input:focus {
+    outline: 2px solid #b0ead8;
+}
+
+.passwordContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #6a9ab0;
+    border-radius: .5rem;
+    padding: 0.75rem 1rem;
+    color: #001f3f;
+}
+
+.passwordInput {
+    border: none;
+    font-size: 1rem;
+    background-color: #6a9ab0;
+    color: #001f3f;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.passwordInput::placeholder {
+    color: #001f3f;
+    opacity: 0.7;
+}
+
+.passwordInput:focus {
+    outline: none;
+    border: none;
+}
+
+.passwordContainer:focus-within {
+    outline: 2px solid #b0ead8;
+}
+
+.button {
+    background-color: #ead8b1;
+    color: #001f3f;
+    font-weight: bold;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.button:hover {
+    background: #fff3d6;
+}
+
+.text {
+    margin-top: 1rem;
+    color: #B0EAD8;
+    font-size: 0.95rem;
+}
+
+.link {
+    color: #bdddec;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid #6A9AB0;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.link:hover {
+    color: #1effb8;
+    border-color: #B0EAD8;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 480px) {
+    .card {
+        padding: 1rem;
+        max-width: 100%;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .form {
+        gap: 0.75rem;
+    }
+
+    .input,
+    .button {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .text {
+        font-size: 0.85rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .card {
+        padding: 1.5rem;
+        max-width: 90%;
+    }
+
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .form {
+        gap: 0.9rem;
+    }
+
+    .input,
+    .button {
+        padding: 0.65rem;
+        font-size: 0.95rem;
+    }
+
+    .text {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .card {
+        max-width: 400px;
+    }
+}

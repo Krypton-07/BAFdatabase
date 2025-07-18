@@ -1,0 +1,288 @@
+:root {
+    --primary-bg: #1e293b;
+    --card-bg: #334155;
+    --accent: #38bdf8;
+    --input-bg: #475569;
+    --text-color: #f1f5f9;
+    --placeholder-color: #94a3b8;
+    --button-bg: #38bdf8;
+    --button-hover: #0ea5e9;
+    --focus-ring: #7dd3fc;
+    --shadow: rgba(0, 0, 0, 0.4);
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px var(--shadow);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+.title {
+    color: var(--accent);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.input {
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    outline: none;
+    width: 100%;
+}
+
+.input::placeholder {
+    color: var(--placeholder-color);
+    opacity: 1;
+}
+
+textarea {
+    resize: none;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+textarea::-webkit-scrollbar {
+    width: 4px;
+    height: 6px;
+}
+
+textarea::-webkit-scrollbar-track {
+    background: rgba(30, 42, 56, 0.3);
+    border-radius: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #4A90E2, #145DA0);
+    border-radius: 10px;
+    border: 1.5px solid rgba(30, 42, 56, 0.6);
+    background-clip: content-box;
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #70A9F7, #2D6CC0);
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.customFile {
+    position: relative;
+    background: var(--input-bg);
+    color: var(--text-color);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.5s;
+    width: 100%;
+}
+
+.customFile:hover {
+    color: var(--primary-bg);
+    background-color: var(--accent);
+}
+
+.fileLabel {
+    font-weight: bolder;
+    letter-spacing: 1px;
+    word-break: break-word;
+}
+
+.fileInput {
+    display: none;
+}
+
+.selectionArea {
+    background-color: var(--shadow);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: var(--text-color);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    text-align: left;
+}
+
+.officesList {
+    width: 100%;
+    max-height: 70px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) #1F2733;
+}
+
+.officesList::-webkit-scrollbar {
+    width: 8px;
+}
+
+.officesList::-webkit-scrollbar-track {
+    background: #1F2733;
+    border-radius: 0.5rem;
+}
+
+.officesList::-webkit-scrollbar-thumb {
+    background-color: var(--accent);
+    border-radius: 0.5rem;
+    border: 2px solid #1F2733;
+}
+
+.fileTypesList {
+    width: 100%;
+    max-height: 70px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) #1F2733;
+}
+
+.fileTypesList::-webkit-scrollbar {
+    width: 8px;
+}
+
+.fileTypesList::-webkit-scrollbar-track {
+    background: #1F2733;
+    border-radius: 0.5rem;
+}
+
+.fileTypesList::-webkit-scrollbar-thumb {
+    background-color: var(--accent);
+    border-radius: 0.5rem;
+    border: 2px solid #1F2733;
+}
+
+.divider {
+    width: 100%;
+    height: 5px;
+    background-color: var(--shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider i {
+    border: 1.5px solid;
+    border-radius: 50%;
+    padding: 1px 2px;
+    color: #ffffff;
+    background: var(--shadow);
+    cursor: pointer;
+}
+
+.radioLabel {
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+.radioOption {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-color);
+    line-height: 1.5rem;
+}
+
+.radioOption input[type='radio'] {
+    accent-color: var(--focus-ring);
+    cursor: pointer;
+}
+
+.button {
+    background-color: var(--button-bg);
+    color: var(--primary-bg);
+    font-weight: bold;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: var(--button-hover);
+}
+
+/* Media Queries */
+
+@media (max-width: 480px) {
+    .card {
+        padding: 1rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .form {
+        gap: 1rem;
+    }
+
+    .input,
+    .customFile,
+    .button {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .fileType {
+        padding: 0.75rem;
+    }
+
+    .radioOption {
+        flex: 1 1 100%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .card {
+        padding: 1.5rem;
+        max-width: 90%;
+    }
+
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .input,
+    .customFile,
+    .button {
+        padding: 0.65rem;
+        font-size: 0.95rem;
+    }
+
+    .fileType {
+        padding: 0.9rem;
+    }
+
+    .radioOption {
+        flex: 1 1 45%;
+    }
+}
